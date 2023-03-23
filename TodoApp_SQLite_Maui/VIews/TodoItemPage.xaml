@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Name}"
+             x:Class="TodoApp_SQLite_Maui.VIews.TodoItemPage">
+    
+    
+    <ContentPage.Content>
+        <StackLayout Margin="20" Spacing="10" VerticalOptions="StartAndExpand">
+            <Label Text="Name"/>
+            <Entry Text="{Binding Name}"/>
+
+            <Label Text="Notes"/>
+            <Entry Text="{Binding Notes}"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Done" 
+                       Margin="0,10" 
+                       HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+
+            <Button x:Name="btnOnSave" Clicked="btnOnSave_Clicked" Text="Save"/>
+            <Button x:Name="btnOnDelete" Clicked="btnOnDelete_Clicked" Text="Delete"/>
+            <Button x:Name="btnOnCancel" Clicked="btnOnCancel_Clicked" Text="Cancel"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
